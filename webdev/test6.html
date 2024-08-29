@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAESTE App - Welcome</title>
+    <link rel="stylesheet" href="s6.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Lora:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <img src="iaeste-logo.png" alt="IAESTE Logo" class="logo">
+            <ul>
+                <li><a href="#about-iaeste">About IAESTE</a></li>
+                <li><a href="#places-to-go">Places to Go Around</a></li>
+                <li><a href="#translator">Language Translator</a></li>
+                <li><a href="#about-intern">About the Intern</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div id="hero">
+            <div class="carousel-images">
+                <div class="carousel-image" style="background-image: url('a-min.jpg');"></div>
+                <div class="carousel-image" style="background-image: url('b-min.jpg');"></div>
+                <div class="carousel-image" style="background-image: url('c-min.jpg');"></div>
+                <div class="carousel-image" style="background-image: url('f-min.jpg');"></div>
+                <div class="carousel-image" style="background-image: url('g-min.jpg');"></div>
+            </div>
+        
+            <div class="carousel-controls">
+                <div class="carousel-arrow left-arrow" onclick="moveSlide(-1)">&#10094;</div>
+                <div class="carousel-arrow right-arrow" onclick="moveSlide(1)">&#10095;</div>
+            </div>
+        <div class="hero-content">
+            <h1>WORK. EXPERIENCE. DISCOVER.</h1>
+            <p>Explore the World with IAESTE: Your Gateway to Global Internships and Opportunities</p>
+        </div>  
+    </div>
+    </section>
+
+    <!-- About IAESTE Section -->
+    <section id="about-iaeste" class="content-section">
+        <div class="container">
+            <h2>About IAESTE</h2>
+            <p>IAESTE is a global organization dedicated to promoting cultural exchange and providing international internship opportunities for students.</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-item">
+                <img src="1.png" alt="Description 1">
+                <p>4000 Members in India</p>
+            </div>
+            <div class="about-item">
+                <img src="2.png" alt="Description 2">
+                <p>500 Internships</p>
+            </div>
+            <div class="about-item">
+                <img src="3.png" alt="Description 3">
+                <p>10 Companies*</p>
+            </div>
+            <div class="about-item">
+                <img src="4.png" alt="Description 4">
+                <p>82 Countries</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="places-to-go" class="content-section">
+        <div class="container">
+            <h2>Places to Go Around Manipal</h2>
+            <div class="places-grid">
+                <div class="place-item">
+                    <img src="manipal-campus.jpg" alt="Sri Krishna Matha">
+                    <div class="place-info">
+                        <p>Sri Krishna Matha</p>
+                    </div>
+                </div>
+                <div class="place-item">
+                    <img src="end-point.jpeg" alt="End Point">
+                    <div class="place-info">
+                        <p>End Point</p>
+                    </div>
+                </div>
+                <div class="place-item">
+                    <img src="manipal-lake.jpg" alt="Manipal Lake">
+                    <div class="place-info">
+                        <p>Manipal Lake</p>
+                    </div>
+                </div>
+                <div class="place-item">
+                    <img src="malpe-beach.jpg" alt="Malpe Beach">
+                    <div class="place-info">
+                        <p>Malpe Beach</p>
+                    </div>
+                </div>
+                <div class="place-item">
+                    <img src="st-marys-island.jpg" alt="St. Mary's Island">
+                    <div class="place-info">
+                        <p>St. Mary's Island</p>
+                    </div>
+                </div>
+                <div class="place-item">
+                    <img src="agumbe-ghats.jpeg" alt="Agumbe Ghats">
+                    <div class="place-info">
+                        <p>Agumbe Ghats</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+   <!-- Language Translator Section -->
+    <section id="translator" class="content-section">
+        <div class="container">
+            <h2>Language Translator</h2>
+            <p>Break down language barriers with our built-in translator tool, making communication seamless wherever you go.</p>
+            
+            <!-- Language Translator Form -->
+            <div class="translator-container">
+                <div class="translator-input">
+                    <label for="source-lang">From:</label>
+                    <select id="source-lang">
+                        <option value="en">English</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="it">Italian</option>
+                        <!-- Add more languages as needed -->
+                    </select>
+                </div>
+                
+                <div class="translator-input">
+                    <label for="target-lang">To:</label>
+                    <select id="target-lang">
+                        <option value="en">English</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="it">Italian</option>
+                        <!-- Add more languages as needed -->
+                    </select>
+                </div>
+                
+                <div class="translator-input">
+                    <label for="text-input">Text to Translate:</label>
+                    <textarea id="text-input" rows="4" placeholder="Enter text here..."></textarea>
+                </div>
+                
+                <button id="translate-button">Translate</button>
+                
+                <div id="translation-result">
+                    <h3>Translation Result:</h3>
+                    <p id="translated-text">Your translation will appear here.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Intern Section -->
+    <section id="about-intern" class="content-section">
+        <div class="container">
+            <h2>About the Intern</h2>
+            <p>Meet the intern who is exploring new opportunities and gaining invaluable experience with IAESTE.</p>
+            <div id="map-container"></div> <!-- Interactive map container -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 IAESTE App. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="map.js"></script>
+
+    
+</body>
+</html>
