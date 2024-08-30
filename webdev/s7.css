@@ -1,0 +1,467 @@
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #000000;
+    background-image: linear-gradient(to bottom right, #050606, #050505);
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background: transparent; /* Start with a transparent background */
+    padding: 12px 0;
+    color: #fff;
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* On top of other elements */
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth background and shadow transition */
+    border-bottom: none; /* Remove any border at the bottom */
+}
+
+nav.scrolled {
+    background: #0c3d5c; /* Blue background when scrolled */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow when scrolled */
+    border-bottom: none; /* Ensure no border is added */
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 12px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    transition: color 0.3s ease;
+    font-size: 0.9em; 
+    text-align: right;
+}
+
+nav ul li a:hover {
+    color: #00ccff;
+}
+
+.logo {
+    width: 80px;
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh + 80px); /* Full viewport height plus nav bar height */
+    width: 100%; /* Full width */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: #000; /* Fallback background color */
+    margin-top: 0px; /* Moves the hero section up to remove the gap */
+    margin-bottom: 0px; /* Adjust this value to create the desired space */
+}
+
+#hero .carousel-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+
+
+}
+
+#hero .carousel-image {
+    flex: 0 0 100%;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    filter: brightness(50%) blur(1px); /* Added brightness filter and kept blur */
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;    /* Position the top edge of the hero content at the center vertically */
+    left: 50%;   /* Position the left edge of the hero content at the center horizontally */
+    transform: translate(-50%, -45%); /* Offset the position by half of the element's height and width to perfectly center it */
+    z-index: 10;
+    color: #fff;
+    padding: 20px;
+}
+
+.hero-content .text-box {
+    background: rgba(0, 0, 0, 0.5); /* Black background with 50% transparency */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.hero-content .text-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    font-family: 'Lora', serif;
+    margin: 0; /* Remove bottom margin */
+    animation: fadeInDown 1s ease-in-out;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+    font-family: 'Poppins', cursive;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-in-out;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+
+/* Keyframes for text animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* Section Styling */
+.content-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #0e0d0d;
+    margin: 0; 
+    margin-bottom: 0; 
+    /*background-image: linear-gradient(to bottom right, #ffffff, #e6f7ff);*/
+    margin-bottom: 0px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.7s ease;
+}
+
+.content-section:hover {
+    transform: translateY(-10px);
+    background-color: #f1f9ff;
+    cursor: pointer;
+    color: #100e0e;
+    box-shadow: 0 0 20px 5px rgba(0, 204, 255, 0.8); /* Glowing effect */
+}
+
+.section-icon {
+    margin-bottom: 20px;
+}
+
+.section-icon img {
+    width: 100px;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #9cd9ff;
+    font-family: 'Lora', serif;
+}
+
+
+section p {
+    font-size: 1.2em;
+    color: #ebedef;
+    margin-bottom: 30px;
+}
+
+.content-section:hover h2,
+.content-section:hover p,
+.content-section:hover about-item p {
+    color: black; /* Change text color to black on hover */
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #0c3d5c;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    margin-top: 40px;
+    font-size: 0.7em;
+    
+}
+
+/* Interactive Map Container */
+#map-container {
+    height: 300px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tooltip Styling */
+.leaflet-tooltip {
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 3px;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Language Translator Styling */
+.translator-container {
+    max-width: 500px;
+    margin: 20px auto; /* Adjusted margin for better positioning */
+    padding: 10px;
+    background-color: #e6f2ff; /* Subtle light blue color */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.translator-input {
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.translator-input label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.translator-input select,
+.translator-input textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.translator-input textarea {
+    resize: vertical;
+    height: 60px; /* Reduced height for a more compact look */
+}
+
+#translate-button {
+    background-color: #007399; /* Darker blue */
+    color: #fff;
+    padding: 10px 20px; /* Reduced padding for a smaller button */
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#translate-button:hover {
+    background-color: #005f73;
+}
+
+#translation-result {
+    margin-top: 15px; /* Reduced margin to bring the result closer */
+}
+
+#translation-result h3 {
+    font-size: 1.5em;
+    color: #003366;
+}
+
+#translated-text {
+    font-size: 1em;
+    color: #333; /* Changed from orange to a matching blue-gray */
+}
+
+/* Adjustments for positioning within the translator section */
+#translator .container {
+    margin-top: 20px; /* Adjust this value as needed */
+}
+
+.translator-container {
+    margin-top: 20px; /* Add or adjust this value */
+}
+
+
+/* Places to Go Around Section */
+.places-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Increased the gap between images */
+    justify-content: center;
+}
+
+.place-item {
+    position: relative;
+    width: 30%;
+    overflow: hidden;
+    border-radius: 15px; /* Slightly increased the border radius */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for a more visually appealing look */
+}
+
+.place-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.7s ease;
+}
+
+.place-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Adjusted opacity for a softer look */
+    color:#0c3d5c ; /* Applied the desired text color */
+    text-align: center;
+    padding: 10px 0;
+    transform: translateY(100%);
+    transition: transform 0.3s ease, color 0.3s ease; /* Added transition for color */
+    font-size: 1.2em;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.place-item:hover .place-info {
+    transform: translateY(0);
+    color: #0c3d5c; /* Ensures the text color is applied on hover */
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    box-shadow: 0 0 20px 5px rgba(0, 204, 255, 0.8); /* Glowing effect */
+}
+
+.place-item:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.7s ease;
+}
+
+
+/* Arrows styling */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3em;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+    opacity: 0; /* Hidden by default */
+}
+
+.carousel-arrow:hover {
+    color: rgba(255, 255, 255, 1);
+    opacity: 1; /* Visible on hover */
+}
+
+/* Positioning the arrows */
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* Ensure the arrows are within the bounds of the hero section */
+#hero:hover .carousel-arrow {
+    opacity: 0.8; /* Show arrows when hero section is hovered */
+}
+
+#about-iaeste {
+    padding: 50px 0;
+    text-align: center;
+    scroll-margin-top: 100px; 
+}
+
+.about-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about-item {
+    flex: 0 1 22%; /* Adjusts to allow space between items */
+    text-align: center;
+}
+
+.about-item img {
+    width: 70px; /* Reduce the width to make the images smaller */
+    height: 180px; /* Ensure the images remain circular */
+    border-radius: 50%;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    filter: brightness(0) saturate(100%) invert(72%) sepia(39%) saturate(543%) hue-rotate(173deg) brightness(95%) contrast(105%);
+    
+}
+
+.about-item p {
+    font-size: 1em; /* Make the text slightly smaller */
+    font-weight: 450; /* Use a thinner font weight */
+    color: #d6e1e8; /* Keep the text color */
+    text-align: center;
+    margin: 0;
+}
+
+.about-item img:hover {
+    transform: scale(1.1);
+}

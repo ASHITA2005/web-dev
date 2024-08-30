@@ -60,7 +60,7 @@ function moveSlide(step) {
     if (currentIndex < 0) {
         currentIndex = totalSlides - 1;
     }
-
+    
     const newTransformValue = -currentIndex * 100;
 
     document.querySelector('.carousel-images').style.transform = `translateX(${newTransformValue}%)`;
